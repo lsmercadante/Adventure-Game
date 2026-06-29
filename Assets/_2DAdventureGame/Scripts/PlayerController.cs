@@ -6,34 +6,34 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 {
     public InputAction MoveAction;
+    Rigidbody2D rigidbody2d;
+    Vector2 move;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //QualitySettings.vSyncCount = 0;
 
-       // Application.targetFrameRate = 10;
         MoveAction.Enable();
+        rigidbody2d = GetComponent<Rigidbody2D>();
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 move = MoveAction.ReadValue<Vector2>();
+        move = MoveAction.ReadValue<Vector2>();
 
         Debug.Log(move);
 
-        Vector2 position = (Vector2)transform.position + move * 3.0f * Time.deltaTime;
+    }
+    void FixedUpdate()
+    {
+        Vector2 position = (Vector2)rigidbody2d.position + move * 3.0f * Time.deltaTime;
 
-
-        transform.position = position;
-
-
-
-
-
+        rigidbody2d.MovePosition(position);
 
     }
 }
