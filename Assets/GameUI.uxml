@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="EndScreen" src="project://database/Assets/EndScreen.uxml?fileID=9197481963319205126&amp;guid=83ba787434b53400bba2a1fc55464d44&amp;type=3#EndScreen"/>
+    <ui:Template name="NPCDialogue" src="project://database/Assets/NPCDialogue.uxml?fileID=9197481963319205126&amp;guid=57dc7ee3a208a4966b4a777aa5252573&amp;type=3#NPCDialogue"/>
+    <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/Demo_Art/SugarLand/UI/UIHealthFrameGreen.png?fileID=21300000&amp;guid=2f4af2912c471814fbe53f9eb7fa6cb2&amp;type=3#UIHealthFrameGreen&quot;); width: 30%; height: 30%; -unity-background-scale-mode: scale-to-fit;">
+        <ui:VisualElement name="CharacterPortrait" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/Demo_Art/SugarLand/UI/CharacterPortraitMarshal.png?fileID=21300000&amp;guid=6c5810b436edb3e40917fefe4281bb5f&amp;type=3#CharacterPortraitMarshal&quot;); -unity-background-scale-mode: scale-to-fit; position: absolute; width: 169px; height: 179px; top: 89px; left: 46px;"/>
+        <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; position: absolute; width: 309px; height: 85px; top: 115px; left: 248px;">
+            <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/Demo_Art/SugarLand/UI/UIHealthBarPink.png?fileID=-883267908&amp;guid=c71d6f86515064a4bb3d5c78dda9a812&amp;type=3#UIHealthBarPink_0&quot;);"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Instance template="NPCDialogue" name="NPCDialogue" style="position: absolute; top: 70%; right: 10%; bottom: 0%; left: 10%; -unity-text-align: upper-left; -unity-paragraph-spacing: 0; letter-spacing: 10px; word-spacing: 10px; -unity-text-outline-width: 0; font-size: 20px;"/>
+    <ui:Instance template="EndScreen" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"/>
+</ui:UXML>
